@@ -1,0 +1,424 @@
+header{
+    height: 60px;
+}
+.logo{
+    color: white;
+    font-size: 2rem;
+    padding-left: 10px;
+}
+
+.navbar ul li a:hover{
+    color: aquamarine;
+}
+.navbar ul li{
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+}
+.navbar ul li:last-child:hover{
+    color: aquamarine;
+}
+.navbar ul li.dropdown{
+    color: white;
+    cursor: pointer;
+}
+
+header .search-icon{
+    color: white;
+    background-color: rgb(53, 49, 49);
+    height: 38px;
+    line-height: 38px;
+    padding: 0 15px ;
+    border-radius:10px 0 0 10px;
+    cursor: pointer;
+}
+header .search-icon i{
+    font-size: 1.2rem;
+
+}
+header .search-input input{
+    height: 36px;
+    width: 75%;
+    font-size: 1.1rem;
+    color: white;
+    background-color: rgb(53, 49, 49);
+    border: none;
+    border-radius: 0 10px 10px 0;
+}
+
+.navbar ul li.dropdown ul{
+    background-color: black;
+    padding: 15px 20px;
+    top: 43.5px;
+    /* right: 2px; */
+    z-index: var(--z-index);
+}
+.navbar ul li.dropdown ul li{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.navbar ul li.dropdown ul li:hover{
+    color: aquamarine;
+}
+
+
+/**** menu  mobile *******/
+
+header .collapse{
+    color: white;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+header .menu-mobile{
+    background-color: black;
+    right: 0;
+    top: 60px;
+    height:calc(100vh - 50px);
+    width: 95%;
+    padding: 10px;
+    z-index: var(--z-index-poppup);
+    
+}
+header .menu-mobile.rightToleft{
+    margin-right: -400px;
+    transform: translate(-400px);
+    transition: transform 1s ease-in 0.5s;
+
+}
+header .menu-mobile .search-bar-mobile{
+    margin: 15px 5px;
+}
+
+header .divider{
+    border: 1px solid rgba(101, 98, 98, 0.2);
+}
+
+header .nav-mobile ul li{
+    margin: 15px 0;
+    font-size: 1.4rem;
+    color: white;
+}
+/* header .nav-mobile ul li ul{
+    right: 243px;
+} */
+
+
+
+/** LA SECTION ULISTRATION ***/
+
+section.ulistration{
+    margin: 30px 0;
+    color: white;
+}
+section.ulistration .image{
+    width: 100% ; 
+    height: 600px;
+}
+section.ulistration .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+section.ulistration .content{
+    top: 50%;
+    left: 2%;
+    width: 400px;
+    z-index: var(--z-index);
+}
+section.ulistration .content .description{
+    font-size: 1.05rem;
+}
+section.ulistration .content .name{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+section.ulistration .content .list-info ul li{
+    border: 1px solid var(--main-color-white);
+    padding: 5px;
+}
+
+section.ulistration .content .btn-play{
+    background-color:var(--main-color);
+}
+
+section.ulistration .dots {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: var(--z-index);  
+}
+section.ulistration .dots .dot{
+    background-color: var(--main-color-white);
+    opacity: 0.7;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 2s ease-in-out;
+}
+section.ulistration .dots .dot.active{
+    background-color: var(--main-color);
+}
+section.ulistration .overlay{
+    background-color: var(--main-color-black);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.5;
+    z-index: var(--z-index-overlay);
+}
+
+
+
+/*** SECTION MOVIE****/
+
+.movies{
+    color: var(--main-color-white);
+}
+.movies .movies-item{
+    width: 550px;
+    background-color: var(--main-color-light-black);
+    padding: 10px;
+    border-radius: 20px;
+}
+.movies .movie-image img{
+    width: 220px;
+    height: 230px;
+}
+.movies .movie-description .movie-name{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px auto;
+    font-weight: bold;
+}
+.movies .movie-description .movie-details,
+.movies .movie-description .director{
+    font-size: 0.9rem;
+}
+.movies .movie-description .inline-group .btn-play{
+    background-color: var(--main-color);
+}
+
+
+
+/*** SECTION CATEGORIE****/
+
+section.all-categorie{
+    color: var(--main-color-white);
+    margin: 50px auto;
+    cursor: pointer;
+}
+section.all-categorie .categorie:hover{
+    box-shadow: 4px 6px 16px var(--main-color);
+}
+section.all-categorie .categorie{
+    border: 1px solid var(--main-color-white);
+    border-radius: 20px;
+    width: 550px;
+    height: 100px;
+    margin-bottom: 50px;
+    transition: all 700ms linear;
+}
+section.all-categorie .categorie .categorie-info .name{
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+section.all-categorie .categorie .categorie-info .details{
+    font-size: 0.9rem;
+}
+
+
+
+/** section Regarder recement **/
+
+.watched{
+    color: var(--main-color-white);
+    margin-bottom: 80px;
+}
+
+.watched .head .recently{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+.watched .head .view-all{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 700ms linear;
+}
+.watched .head .view-all:hover{
+    box-shadow: 4px 4px 32px var(--main-color);
+}
+.watched .movie-item .movie-image{
+    width: 350px;
+    height: 250px;
+}
+.watched .movie-item .movie-image img{
+    width: 100%;
+    height: 100%;
+}
+.watched .movie-item .movie-name{
+    text-transform: capitalize;
+}
+
+.movie-info ul li{
+    border-right: 2px solid var(--main-color-light-black);
+    padding-right: 8px;
+}
+.movie-info ul li:last-child{
+    border-right: none;
+}
+
+/**POPPUP */
+.poppup{
+    background-color: var(--main-color-light-black);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-index-poppup);
+}
+.poppup-content{
+    width: 500px;
+    height: 350px;
+    box-shadow: 1px 2px 8px var(--main-color);
+    
+}
+.poppup .poppup-ulistration video{
+    width: 100%;
+    height: 350px;
+}
+/** FOOTER***/
+footer{
+    color: var(--main-color-white);
+    background-color: var(--main-color-light-black);
+    height: 200px;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1170px) {
+    .movies .movies-items{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:1127px) {
+    .all-categorie .categories{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:735px) {
+    .watched .content{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:600px) {
+    .movies .movies-items .movies-item{
+        flex-wrap: wrap;
+    }
+    .movies .movie-image {
+        width: 100%;
+    }
+    .movies .movie-image img{
+        width: 100%;
+        height: 300px;
+    }
+
+    /*** SECTION CATEGORIE****/
+
+    section.all-categorie .categorie{
+        width: 100%;
+        height: 100px;
+    }
+    section.all-categorie .categorie .categorie-info .name{
+        font-size: 2rem;
+    }
+
+    /** section Regarder recement **/
+    
+    .watched .head .recently{
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+    .watched {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    section.ulistration .content{
+        width: 100%;
+        left: 1%;
+        padding-right: 2px;
+    }
+    section.ulistration .content .description{
+        font-size: 0.9rem;
+    }
+    section.ulistration .content .name{
+        font-size: 1.05rem;
+        letter-spacing: 2px;
+    }
+    section.ulistration .content .list-info ul li{
+        padding: 2px;
+    }
+    section.ulistration .content .list-info ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:340px) {
+    
+    section.ulistration .content .description{
+        font-size: 0.8rem;
+    }
+    section.ulistration .content .name{
+        font-size: 0.9rem;
+        letter-spacing: 0;
+    }
+    section.ulistration .content .list-info ul li{
+        padding: 2px;
+        font-size: 0.9rem;
+    }
+    section.ulistration .content .director{
+        font-size: 0.9rem;
+    }
+    
+    section.ulistration .content .btn-details,
+    section.ulistration .content .btn-play{
+        font-size: 0.9rem;
+    }
+
+    /** section movie **/
+    .movies .movie-description .movie-name{
+        letter-spacing: 0;
+        font-size: 0.9rem;
+    }
+    .movies .movie-description .list-info ul li{
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+    }
+    .movies .movie-description .movie-details,
+    .movies .movie-description .director{
+        font-size: 0.8rem;
+    }
+    .movies .movie-description .inline-group .time{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width:600px) {
+    header .menu-mobile{
+        display: none;
+    }
+}
+

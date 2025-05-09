@@ -1,0 +1,14 @@
+const API="http://127.0.0.1:5500/API/data.json" ;
+const slidesContent=document.querySelector("section.ulistration .slide-items") ;
+const dots=document.querySelectorAll("section.ulistration .dots .dot") ;
+const categorie=document.getElementById("dropdown") ;
+const subNav=document.querySelector(".dropdown ul") ;
+const moviesContent=document.querySelector(".list-content .list-details .movies-items") ;
+const genres=document.querySelectorAll(".list-head ul li") ;
+const subNavCategories=document.querySelectorAll(".navbar ul li.dropdown ul li") ;
+const container=document.querySelector(".container") ;
+const collapse=document.getElementById("collapse-bars") ;
+const menuMobile=document.getElementById("menu-mobile") ;
+const searchInput=document.querySelector(".search-input input") ;
+const search=document.querySelector(".search-bar .search-icon")
+var currentSlide=0 ;

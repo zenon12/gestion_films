@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection de film</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <header class="flex aic box gap-5 relative">
+        <div class="logo flex-1">Collection</div>
+        <nav class="navbar flex-2">
+            <ul class="unlisted flex gap-20 aic">
+                <li class="nav-item"><a href="/">accueil</a></li>
+                <li class="nav-item"><a href="list.html">liste</a></li>
+                <li class="nav-item"><a href="addMovie.html">ajouter</a></li>
+                <li class="nav-item dropdown relative" id="dropdown">
+                    categorie <i class="fa-solid fa-chevron-down"></i>
+                    <ul class="unlisted absolute box none">
+                        <li class="nav-item">action</li>
+                        <li class="nav-item">drame</li>
+                        <li class="nav-item">romance</li>
+                        <li class="nav-item">shonen</li>
+                        <li class="nav-item">fantastique</li>
+                        <li class="nav-item">science-fiction</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar flex-1 flex aic">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="search-input flex-1">
+                <input type="text" name="search" placeholder="rechercher ..." required>
+            </div>
+        </div>
+        <div class="collapse none" id="collapse-bars">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu-mobile absolute box none rightToleft" id="menu-mobile">
+            <div class="search-bar-mobile flex-1 flex aic">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="search-input flex-1">
+                    <input type="text" name="search" placeholder="rechercher ..." required>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <nav class="nav-mobile">
+                <ul class="unlisted">
+                    <li class="nav-item"><a href="/">accueil</a></li>
+                <li class="nav-item"><a href="/">liste</a></li>
+                <li class="nav-item"><a href="/">ajouter</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <div class="container">
+        <section class="ulistration relative">
+            <div class="slide-items">
+                <div class="slide-item none">
+                    <div class="image">
+                        <img src="/assets/images/demon.png" alt="Demon Slayer">
+                    </div>
+                    <div class="content absolute">
+                            <div class="name mb-10">Demon Slayer</div>
+                            <div class="list-info mb-10">
+                                <ul class="unlisted flex gap-10">
+                                    <li class="list-item">18+</li>
+                                    <li class="list-item">HD</li>
+                                    <li class="list-item">2019</li>
+                                    <li class="list-item">Anime</li>
+                                    <li class="list-item">28mn</li>
+                                </ul>
+                            </div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sapiente quod accusantium facilis iure ea dolore obcaecati cum molestias eum! Beatae ad quo nisi
+                            </div>
+                            <div class="director mt-5">
+                                <strong>Realisateur : </strong>Natsuki Hanae,Akaris kito,Hiro Shimono
+                            </div>
+                            <div class="ulistration-btn flex gap-20 mt-15">
+                                <div class="btn-play btn">
+                                    play
+                                </div>
+                                <div class="btn-details btn">
+                                    details
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dots flex gap-10 absolute">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="overlay absolute"></div>
+        </section>
+        <section class="movies mb-20">
+            <div class="movies-items flex jcsb wrap gap-10">
+                <div class="movies-item flex gap-10">
+                    <div class="movie-image">
+                        <img src="/assets/images/fantastique/les_trois_fantastiques_xlg.jpg" alt="les trois fantastique">
+                    </div>
+                    <div class="movie-description">
+                        <div class="movie-name">
+                            Les trois fantastiques
+                        </div>
+                        <div class="list-info mb-10">
+                            <ul class="unlisted flex gap-10">
+                                <li class="list-item">2024</li>
+                                <li class="list-item">18+</li>
+                                <li class="list-item">Fantastique</li>
+                                <li class="list-item">45mn</li>
+                            </ul>
+                        </div>
+                        <div class="movie-details mb-10">
+                            Trois amis ordinaires acquièrent des pouvoirs extraordinaires et doivent apprendre à les maîtriser
+                        </div>
+                        <div class="director mb-10">
+                            <strong>Realisateur : </strong>Jean-Pierre Jeunet
+                        </div>
+                        <div class="inline-group flex gap-20 mt-15">
+                            <!-- <div class="btn-play btn">
+                                play
+                            </div> -->
+                            <div class="time btn">
+                                45mn
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="movies-item flex gap-10">
+                    <div class="movie-image">
+                        <img src="/assets/images/science_fiction/creator_ver2_xlg.jpg" alt="the Creator">
+                    </div>
+                    <div class="movie-description">
+                        <div class="movie-name">
+                            The Creator
+                        </div>
+                        <div class="list-info mb-10">
+                            <ul class="unlisted flex gap-10">
+                                <li class="list-item">2023</li>
+                                <li class="list-item">18+</li>
+                                <li class="list-item">Science-fiction</li>
+                                <li class="list-item">45mn</li>
+                            </ul>
+                        </div>
+                        <div class="movie-details mb-10">
+                            Dans un futur où l'IA est en guerre contre l'humanité, un soldat est chargé de traquer et de détruire le créateur d'une arme mystérieuse
+                        </div>
+                        <div class="director mb-10">
+                            <strong>Realisateur : </strong>Gareth Edwards
+                        </div>
+                        <div class="inline-group flex gap-20 mt-15">
+                            <!-- <div class="btn-play btn">
+                                play
+                            </div> -->
+                            <div class="time btn">
+                                45mn
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="all-categorie">
+            <div class="categories flex jcsb wrap">
+                <div class="categorie flex jcc aic">
+                    <div class="categorie-info">
+                        <div class="name">
+                            Action
+                        </div>
+                        <div class="details">
+                            <span>+250</span> films
+                        </div>
+                    </div>
+                </div>
+                <div class="categorie flex jcc aic">
+                    <div class="categorie-info">
+                        <div class="name">
+                            Shonen
+                        </div>
+                        <div class="details">
+                            <span>+850</span> films
+                        </div>
+                    </div>
+                </div>
+                <div class="categorie flex jcc aic">
+                    <div class="categorie-info">
+                        <div class="name">
+                            Romance
+                        </div>
+                        <div class="details">
+                            <span>+250</span> films
+                        </div>
+                    </div>
+                </div>
+                <div class="categorie flex jcc aic">
+                    <div class="categorie-info">
+                        <div class="name">
+                            Fantastique
+                        </div>
+                        <div class="details">
+                            <span>+300</span> films
+                        </div>
+                    </div>
+                </div>
+                <div class="categorie flex jcc aic">
+                    <div class="categorie-info">
+                        <div class="name">
+                            Science Fiction
+                        </div>
+                        <div class="details">
+                            <span>+300</span> films
+                        </div>
+                    </div>
+                </div>
+                <div class="categorie flex jcc aic">
+                    <div class="categorie-info">
+                        <div class="name">
+                            Drame
+                        </div>
+                        <div class="details">
+                            <span>+300</span> films
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="watched">
+            <div class="head flex jcsb aic mb-20">
+                <span class="recently">Regarder recement</span>
+                <span class="view-all">Voir Plus</span>
+            </div>
+            <div class="content flex gap-15 jcsb wrap">
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="/assets/images/shonen/bullet.png" alt="black bullet">
+                    </div>
+                    <div class="movie-details">
+                        <div class="movie-name">
+                            Black Bullet
+                        </div>
+                        <div class="movie-info">
+                            <ul class="unlisted flex gap-10">
+                                <li class="list-item">2020</li>
+                                <li class="list-item">18+</li>
+                                <li class="list-item">Shonen</li>
+                                <li class="list-item">24mn</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="/assets/images/action/atomic_blonde.jpg" alt="Atomic Blonde">
+                    </div>
+                    <div class="movie-details">
+                        <div class="movie-name">
+                            Atomic Blonde
+                        </div>
+                        <div class="movie-info">
+                            <ul class="unlisted flex gap-10">
+                                <li class="list-item">2017</li>
+                                <li class="list-item">18+</li>
+                                <li class="list-item">Action</li>
+                                <li class="list-item">50mn</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="/assets/images/action/mad_max_fury_road_ver7.jpg" alt="Mad Max: Fury Road">
+                    </div>
+                    <div class="movie-details">
+                        <div class="movie-name">
+                            Mad Max: Fury Road
+                        </div>
+                        <div class="movie-info">
+                            <ul class="unlisted flex gap-10">
+                                <li class="list-item">2015</li>
+                                <li class="list-item">18+</li>
+                                <li class="list-item">Action</li>
+                                <li class="list-item">45mn</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="add-recently watched">
+            <div class="head flex jcsb aic mb-20">
+                <span class="recently">Ajouter recement</span>
+                <span class="view-all">Voir Plus</span>
+            </div>
+            <div class="content flex gap-15 jcsb wrap">
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="/assets/images/romance/titanic_ver2.jpg" alt="Titanic">
+                    </div>
+                    <div class="movie-details">
+                        <div class="movie-name">
+                            Titanic
+                        </div>
+                        <div class="movie-info">
+                            <ul class="unlisted flex gap-10">
+                                <li class="list-item">1997</li>
+                                <li class="list-item">18+</li>
+                                <li class="list-item">Romance</li>
+                                <li class="list-item">50mn</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="/assets/images/drame/fight_club_ver1.jpg" alt="Fight Club">
+                    </div>
+                    <div class="movie-details">
+                        <div class="movie-name">
+                            Fight Club
+                        </div>
+                        <div class="movie-info">
+                            <ul class="unlisted flex gap-10">
+                                <li class="list-item">1999</li>
+                                <li class="list-item">18+</li>
+                                <li class="list-item">Drame</li>
+                                <li class="list-item">45mn</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-item">
+                    <div class="movie-image">
+                        <img src="/assets/images/fantastique/fantasy_football_xxlg.jpg" alt="Fantasy Football">
+                    </div>
+                    <div class="movie-details">
+                        <div class="movie-name">
+                            Fantasy Football
+                        </div>
+                        <div class="movie-info">
+                            <ul class="unlisted flex gap-10">
+                                <li class="list-item">2022</li>
+                                <li class="list-item">18+</li>
+                                <li class="list-item">Fantastique</li>
+                                <li class="list-item">45mn</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Le poppup -->
+        <!-- <div class="poppup fixed">
+            <div class="poppup-content">
+                <div class="poppup-ulistration">
+                    <video controls>
+                        <source src="" type="">
+                    </video>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <footer class="relative flex jcc">
+        <p>Tout droit reservé &copy; 2025</p>
+    </footer>
+
+
+    <script src="/assets/js/variables.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

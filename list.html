@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection de film</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <header class="flex aic box gap-5 relative">
+        <div class="logo flex-1">Collection</div>
+        <nav class="navbar flex-2">
+            <ul class="unlisted flex gap-20 aic">
+                <li class="nav-item"><a href="/">accueil</a></li>
+                <li class="nav-item"><a href="list.html">liste</a></li>
+                <li class="nav-item"><a href="addMovie.html">ajouter</a></li>
+                <li class="nav-item dropdown relative" id="dropdown">
+                    categorie <i class="fa-solid fa-chevron-down"></i>
+                    <ul class="unlisted absolute box none">
+                        <li class="nav-item">action</li>
+                        <li class="nav-item"> drame</li>
+                        <li class="nav-item">romance</li>
+                        <li class="nav-item">shonen</li>
+                        <li class="nav-item">fantastique</li>
+                        <li class="nav-item">science-fiction</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="search-bar flex-1 flex aic">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="search-input flex-1">
+                <input type="text" name="search" placeholder="rechercher ..." required>
+            </div>
+        </div>
+        <div class="collapse none" id="collapse-bars">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu-mobile absolute box none" id="menu-mobile">
+            <div class="search-bar-mobile flex-1 flex aic">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="search-input flex-1">
+                    <input type="text" name="search" placeholder="rechercher ..." required>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <nav class="nav-mobile">
+                <ul class="unlisted">
+                    <li class="nav-item"><a href="/">accueil</a></li>
+                <li class="nav-item"><a href="/">liste</a></li>
+                <li class="nav-item"><a href="/">ajouter</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="list-content">
+            <div class="list-head">
+                <nav class="sub-nav">
+                    <ul class="unlisted flex jcc aic jcse wrap gap-10 mt-20">
+                        <li class="nav-item active">action</li>
+                        <li class="nav-item">drame</li>
+                        <li class="nav-item">romance</li>
+                        <li class="nav-item">fantastique</li>
+                        <li class="nav-item">shonen</li>
+                        <li class="nav-item">science-fiction</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="list-details movies mb-20">
+                <div class="movies-items flex jcsb wrap">
+                    <div class="movies-item flex gap-10 mb-20">
+                        <div class="movie-image">
+                            <img src="/assets/images/lie.png" alt="academie">
+                        </div>
+                        <div class="movie-description">
+                            <div class="movie-name">
+                                My hero academie
+                            </div>
+                            <div class="list-info mb-10">
+                                <ul class="unlisted flex gap-10">
+                                    <li class="list-item">2012</li>
+                                    <li class="list-item">18+</li>
+                                    <li class="list-item">anime</li>
+                                    <li class="list-item">22mn</li>
+                                </ul>
+                            </div>
+                            <div class="movie-details mb-10">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis quia eum impedit porro aut eligendi explicabo perspiciatis rem cumque.
+                            </div>
+                            <div class="director mb-10">
+                                <strong>Realisateur : </strong>Saliou,Thierno,ousmane
+                            </div>
+                            <div class="inline-group flex gap-20 mt-15">
+                                <div class="btn-play btn">
+                                    play
+                                </div>
+                                <div class="time btn">
+                                    Info
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="relative flex jcc">
+        <p>Tout droit reservé &copy; 2025</p>
+    </footer>
+
+
+    <script src="/assets/js/variables.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

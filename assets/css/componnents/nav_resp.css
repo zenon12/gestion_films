@@ -1,0 +1,30 @@
+/**NAVBAR**/
+@media screen and (max-width:912px){
+    .navbar ul li,
+    .navbar ul li.dropdown ul li a{
+        font-size: 0.95rem;
+    }
+}
+@media screen and (max-width:630px){
+    .logo{
+        font-size: 1.4rem;
+    }
+    .search-bar .search-input input{
+        width: 50%;
+    }
+    .navbar ul li,
+    .navbar ul li.dropdown ul li a{
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width:600px){
+    header .navbar,
+    header .search-bar{
+        display: none;
+    }
+
+    header .collapse{
+        display: block;
+    }
+}

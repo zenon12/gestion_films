@@ -1,0 +1,30 @@
+.rightToleft{
+    animation: rightToleft 1.2s ease  forwards;
+}
+.leftToright{
+    animation: leftToright 1.2s ease  forwards;
+}
+
+@keyframes rightToleft {
+    from{
+        margin-right: -120%;
+    }
+    to{
+        margin-right:0;
+    }
+}
+@keyframes leftToright {
+    from{
+        margin-right:0;
+    }
+    to{
+        margin-right: -120%;
+    }
+}
+
+
+
+
+
+
+

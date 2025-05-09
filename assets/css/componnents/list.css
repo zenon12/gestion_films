@@ -1,0 +1,32 @@
+.list-details{
+    padding: 0 20px;
+}
+.list-content .list-head ul li{
+    border: 1px solid var(--main-color-white);
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.list-content .list-head ul li.active,
+.list-content .list-head ul li:hover{
+    box-shadow: 2px 2px 4px var(--main-color);
+}
+
+
+.list-details{
+    margin-top: 80px;
+}
+
+
+
+
+
+
+
+
+/* @media screen and(max-width:1200px) {
+    .list-details .movies-items{
+        justify-content: center !important ;
+    }
+    
+} */

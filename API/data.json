@@ -1,0 +1,406 @@
+[
+    {
+        "action": [
+          {
+            "id": 1,
+            "title": "Mad Max: Fury Road",
+            "year": 2015,
+            "genre": ["Action"],
+            "description": "Dans un désert post-apocalyptique, Max s'allie à une femme rebelle pour fuir un tyran.",
+            "director": "George Miller",
+            "image": "/assets/images/action/mad_max_fury_road_ver7.jpg"
+          },
+          {
+            "id": 2,
+            "title": "John Wick",
+            "year": 2014,
+            "genre": ["Action"],
+            "description": "Un ancien tueur à gages reprend du service pour se venger de ceux qui lui ont volé tout ce qu’il avait.",
+            "director": "Chad Stahelski",
+            "image": "/assets/images/action/john_wick.jpg"
+          },
+          {
+            "id": 3,
+            "title": "Gladiator",
+            "year": 2000,
+            "genre": ["Action", "Drame"],
+            "description": "Un général romain trahi devient gladiateur pour venger sa famille.",
+            "director": "Ridley Scott",
+            "image": "/assets/images/action/gladiator_ver1.jpg"
+          },
+          {
+            "id": 4,
+            "title": "The Dark Knight",
+            "year": 2008,
+            "genre": ["Action", "Fantastique"],
+            "description": "Batman affronte le Joker, un criminel chaotique semant la terreur à Gotham.",
+            "director": "Christopher Nolan",
+            "image": "/assets/images/action/dark_knight_ver5.jpg"
+          },
+          {
+            "id": 5,
+            "title": "Die Hard",
+            "year": 1988,
+            "genre": ["Action"],
+            "description": "Un policier de New York tente de sauver des otages dans un gratte-ciel.",
+            "director": "John McTiernan",
+            "image": "/assets/images/action/die_hard.jpg"
+          },
+          {
+            "id": 7,
+            "title": "Atomic Blonde",
+            "year": 2017,
+            "genre": ["Action", "Thriller"],
+            "description": "Une espionne du MI6 est envoyée à Berlin pendant la guerre froide pour enquêter sur un meurtre.",
+            "director": "David Leitch",
+            "image": "/assets/images/action/atomic_blonde.jpg"
+          },
+          {
+            "id": 8,
+            "title": "Oldboy",
+            "year": 2003,
+            "genre": ["Action", "Drame"],
+            "description": "Un homme emprisonné pendant 15 ans sans raison apparente cherche à se venger.",
+            "director": "Park Chan-wook",
+            "image": "/assets/images/action/oldboy.jpg"
+          },
+          {
+            "id": 9,
+            "title": "The Bourne Identity",
+            "year": 2002,
+            "genre": ["Action", "Thriller"],
+            "description": "Un homme amnésique tente de découvrir son identité tout en échappant à des assassins.",
+            "director": "Doug Liman",
+            "image": "/assets/images/action/bourne_identity.jpg"
+          }
+        ],
+        "drame": [
+          {
+            "id": 12,
+            "title": "The Shawshank Redemption",
+            "year": 1994,
+            "genre": [
+              "Drame",
+              "Crime"
+            ],
+            "description": "Un banquier injustement condamné tente de s’évader de prison et retrouver sa liberté.",
+            "director": "Frank Darabont",
+            "image": "/assets/images/drame/shawshank_redemption_ver1.jpg"
+          },
+          {
+            "id": 13,
+            "title": "The Godfather",
+            "year": 1972,
+            "genre": [
+              "Drame",
+              "Crime"
+            ],
+            "description": "L’ascension d’un jeune homme dans l’empire mafieux de sa famille.",
+            "director": "Francis Ford Coppola",
+            "image": "/assets/images/drame/godfather_ver1.jpg"
+          },
+          {
+            "id": 15,
+            "title": "Fight Club",
+            "year": 1999,
+            "genre": [
+              "Drame",
+              "Psychologique"
+            ],
+            "description": "Un employé de bureau rencontre un vendeur de savon et fonde un club secret de combat.",
+            "director": "David Fincher",
+            "image": "/assets/images/drame/fight_club_ver1.jpg"
+          },
+          {
+            "id": 16,
+            "title": "The Pianist",
+            "year": 2002,
+            "genre": [
+              "Drame",
+              "Guerre"
+            ],
+            "description": "L’histoire vraie d’un pianiste juif tentant de survivre dans le ghetto de Varsovie.",
+            "director": "Roman Polanski",
+            "image": "/assets/images/drame/pianist.jpg"
+          },
+          {
+            "id": 17,
+            "title": "Requiem for a Dream",
+            "year": 2000,
+            "genre": [
+              "Drame",
+              "Psychologique"
+            ],
+            "description": "Quatre personnes sombrent dans la dépendance et l’obsession.",
+            "director": "Darren Aronofsky",
+            "image": "/assets/images/drame/requiem_for_a_dream.jpg"
+          },
+          {
+            "id": 18,
+            "title": "The Green Mile",
+            "year": 1999,
+            "genre": [
+              "Drame",
+              "Fantastique"
+            ],
+            "description": "Un gardien de prison découvre les pouvoirs mystérieux d’un détenu condamné à mort.",
+            "director": "Frank Darabont",
+            "image": "/assets/images/drame/green_mile_ver1.jpg"
+          },
+          {
+            "id": 20,
+            "title": "12 Years a Slave",
+            "year": 2013,
+            "genre": [
+              "Drame",
+              "Historique"
+            ],
+            "description": "Un homme libre est kidnappé et vendu comme esclave aux États-Unis du XIXe siècle.",
+            "director": "Steve McQueen",
+            "image": "/assets/images/drame/twelve_years_a_slave.jpg"
+          }
+        ],
+        "romance":[
+          {
+            "id": 21,
+            "title": "Titanic",
+            "year": 1997,
+            "genre": ["Romance", "Drame"],
+            "description": "Une histoire d'amour naît entre deux passagers de classes sociales différentes sur le Titanic.",
+            "director": "James Cameron",
+            "image": "/assets/images/romance/titanic_ver2.jpg"
+          },
+          {
+            "id": 22,
+            "title": "The Notebook",
+            "year": 2004,
+            "genre": ["Romance", "Drame"],
+            "description": "Un homme lit l’histoire d’amour de deux jeunes amoureux à une femme âgée dans une maison de retraite.",
+            "director": "Nick Cassavetes",
+            "image": "/assets/images/romance/notebook.jpg"
+          },
+          {
+            "id": 23,
+            "title": "La La Land",
+            "year": 2016,
+            "genre": ["Romance", "Musical"],
+            "description": "Un musicien de jazz et une actrice rêvent de réussite à Los Angeles tout en vivant une passion intense.",
+            "director": "Damien Chazelle",
+            "image": "/assets/images/romance/la_la_land_ver4.jpg"
+          },
+          {
+            "id": 25,
+            "title": "Before Sunrise",
+            "year": 1995,
+            "genre": ["Romance", "Drame"],
+            "description": "Deux jeunes gens se rencontrent dans un train et passent la nuit ensemble à Vienne.",
+            "director": "Richard Linklater",
+            "image": "/assets/images/romance/before_sunrise.jpg"
+          },
+          {
+            "id": 26,
+            "title": "Eternal Sunshine of the Spotless Mind",
+            "year": 2004,
+            "genre": ["Romance", "Science-fiction"],
+            "description": "Après une rupture douloureuse, un homme tente d’effacer tous les souvenirs de son ex.",
+            "director": "Michel Gondry",
+            "image": "/assets/images/romance/eternal_sunshine_of_the_spotless_mind_ver1.jpg"
+          }
+        ],
+        "shonen":[
+          {
+            "id": 31,
+            "title": "One Piece: Stampede",
+            "year": 2019,
+            "genre": ["Shonen", "Aventure"],
+            "description": "L'équipage du Chapeau de paille participe à une immense chasse au trésor réunissant les plus grands pirates.",
+            "director": "Takashi Otsuka",
+            "image": "/assets/images/shonen/onepiece.png"
+          },
+          {
+            "id": 35,
+            "title": "My Hero Academia: Heroes Rising",
+            "year": 2019,
+            "genre": ["Shonen", "Super-héros"],
+            "description": "La classe 1-A doit défendre une île isolée contre un nouveau vilain redoutable.",
+            "director": "Kenji Nagasaki",
+            "image": "/assets/images/shonen/academie.png"
+          },
+          {
+            "id": 36,
+            "title": "Demon Slayer: Le Train de l'infini",
+            "year": 2020,
+            "genre": ["Shonen", "Fantastique"],
+            "description": "Tanjirō et ses amis embarquent dans un train hanté pour enquêter sur des disparitions mystérieuses.",
+            "director": "Haruo Sotozaki",
+            "image": "/assets/images/shonen/demonslayer1.png"
+          },
+          {
+            "id": 53,
+            "title": "Black Bullet",
+            "year": 2014,
+            "genre": ["Action", "Science-fiction"],
+            "description": "Dans un futur où l'humanité est menacée par un virus parasitaire, un jeune combattant et sa partenaire maudite affrontent ces monstres.",
+            "director": "Masayuki Kojima",
+            "image": "/assets/images/shonen/black.png"
+          },
+          {
+            "id": 54,
+            "title": "Hell's Paradise",
+            "year": 2023,
+            "genre": ["Action", "Fantastique"],
+            "description": "Un ninja condamné à mort se rend sur une île mystérieuse à la recherche de l'élixir d'immortalité dans une mission où règne la mort.",
+            "director": "Kaori Makita",
+            "image": "/assets/images/shonen/hells.png"
+          },
+          {
+            "id": 55,
+            "title": "Chainsaw Man",
+            "year": 2022,
+            "genre": ["Action", "Horreur", "Fantastique"],
+            "description": "Denji, un jeune homme fusionné avec un démon-tronçonneuse, rejoint une unité gouvernementale de chasseurs de démons.",
+            "director": "Ryū Nakayama",
+            "image": "/assets/images/shonen/chainsawman.png"
+          },
+          {
+            "id": 56,
+            "title": "Steins;Gate",
+            "year": 2011,
+            "genre": ["Science-fiction", "Thriller"],
+            "description": "Un groupe d'amis découvre comment envoyer des messages dans le passé et se retrouve mêlé à une dangereuse organisation secrète.",
+            "director": "Hiroshi Hamasaki",
+            "image": "/assets/images/shonen/gate.png"
+          },
+          {
+            "id": 57,
+            "title": "Another",
+            "year": 2012,
+            "genre": ["Horreur", "Mystère"],
+            "description": "Un nouvel élève découvre une étrange malédiction qui frappe sa classe depuis des décennies, causant des morts violentes et inexpliquées.",
+            "director": "Tsutomu Mizushima",
+            "image": "/assets/images/shonen/another.png"
+          },
+          {
+            "id": 58,
+            "title": "Eighty Six (86)",
+            "year": 2021,
+            "genre": ["Action", "Drame", "Science-fiction"],
+            "description": "Dans un pays où les citoyens vivent en paix, des soldats bannis livrent une guerre secrète contre des drones autonomes.",
+            "director": "Toshimasa Ishii",
+            "image": "/assets/images/shonen/eightysix.png"
+          }
+        ],
+        "fantastique":[
+          {
+            "id": 41,
+            "title": "Fantastic Beasts: The Secrets of Dumbledore",
+            "year": 2022,
+            "genre": ["Fantastique", "Aventure"],
+            "description": "Albus Dumbledore confie à Norbert Dragonneau et ses alliés une mission qui les oppose aux forces de Gellert Grindelwald.",
+            "director": "David Yates",
+            "image": "/assets/images/fantastique/fantastic_beasts_the_secrets_of_dumbledore_ver30_xlg.jpg"
+          },
+          {
+            "id": 42,
+            "title": "Fantastic Beasts: The Crimes of Grindelwald",
+            "year": 2018,
+            "genre": ["Fantastique", "Aventure"],
+            "description": "Norbert Dragonneau est chargé par Dumbledore de contrecarrer les plans de Grindelwald, qui cherche à dominer le monde des sorciers.",
+            "director": "David Yates",
+            "image": "/assets/images/fantastique/fantastic_beasts_the_crimes_of_grindelwald_ver25_xlg.jpg"
+          },
+          {
+            "id": 43,
+            "title": "Fantasy Island",
+            "year": 2020,
+            "genre": ["Fantastique", "Horreur"],
+            "description": "Des invités sur une île tropicale voient leurs rêves se transformer en cauchemars.",
+            "director": "Jeff Wadlow",
+            "image": "/assets/images/fantastique/fantasy_island_xxlg.jpg"
+          },
+          {
+            "id": 44,
+            "title": "Les trois fantastiques",
+            "year": 2024,
+            "genre": ["Fantastique", "Comédie"],
+            "description": "Trois amis ordinaires acquièrent des pouvoirs extraordinaires et doivent apprendre à les maîtriser.",
+            "director": "Jean-Pierre Jeunet",
+            "image": "/assets/images/fantastique/les_trois_fantastiques_xlg.jpg"
+          },
+          {
+            "id": 45,
+            "title": "The Fantastic Four: First Steps",
+            "year": 2025,
+            "genre": ["Fantastique", "Action"],
+            "description": "Les origines de la célèbre équipe de super-héros alors qu'ils découvrent leurs pouvoirs et affrontent leur premier ennemi.",
+            "director": "Jon Watts",
+            "image": "/assets/images/fantastique/fantastic_four_ver11.jpg"
+          },
+          {
+            "id": 46,
+            "title": "Fantastic Four: Rise of the Silver Surfer",
+            "year": 2007,
+            "genre": ["Fantastique", "Action"],
+            "description": "Les Quatre Fantastiques doivent affronter le Surfer d'Argent et empêcher la destruction de la Terre.",
+            "director": "Tim Story",
+            "image": "/assets/images/fantastique/fantastic_four_rise_of_the_silver_surfer_ver7_xlg.jpg"
+          },
+          {
+            "id": 47,
+            "title": "Final Fantasy: The Spirits Within",
+            "year": 2001,
+            "genre": ["Fantastique", "Science-fiction"],
+            "description": "Une scientifique cherche à sauver la Terre d'une invasion extraterrestre en utilisant des esprits mystiques.",
+            "director": "Hironobu Sakaguchi",
+            "image": "/assets/images/fantastique/final_fantasy_the_spirits_within_ver1_xxlg.jpg"
+          },
+          {
+            "id": 48,
+            "title": "Fantasy Football",
+            "year": 2022,
+            "genre": ["Fantastique", "Comédie"],
+            "description": "Une adolescente découvre qu'elle peut contrôler les performances de son père joueur de football via un jeu vidéo.",
+            "director": "Anton Cropper",
+            "image": "/assets/images/fantastique/fantasy_football_xxlg.jpg"
+          }
+        ],
+        "science-fiction":[
+          {
+            "id": 49,
+            "title": "Jodorowsky's Dune",
+            "year": 2013,
+            "genre": ["Science-fiction", "Documentaire"],
+            "description": "Un documentaire explorant la tentative ambitieuse d'Alejandro Jodorowsky d'adapter le roman 'Dune' au cinéma.",
+            "director": "Frank Pavich",
+            "image": "/assets/images/science_fiction/jodorowskys_dune_ver3.jpg"
+          },
+          {
+            "id": 50,
+            "title": "The Midnight Sky",
+            "year": 2020,
+            "genre": ["Science-fiction", "Drame"],
+            "description": "Un scientifique solitaire en Arctique tente d'avertir un équipage spatial de ne pas retourner sur Terre après une catastrophe mondiale.",
+            "director": "George Clooney",
+            "image": "/assets/images/science_fiction/midnight_sky_ver2_xlg.jpg"
+          },
+          {
+            "id": 51,
+            "title": "The Creator",
+            "year": 2023,
+            "genre": ["Science-fiction", "Action"],
+            "description": "Dans un futur où l'IA est en guerre contre l'humanité, un soldat est chargé de traquer et de détruire le créateur d'une arme mystérieuse.",
+            "director": "Gareth Edwards",
+            "image": "/assets/images/science_fiction/creator_ver2_xlg.jpg"
+          },
+          {
+            "id": 52,
+            "title": "Beavis and Butt-Head Do the Universe",
+            "year": 2022,
+            "genre": ["Science-fiction", "Comédie"],
+            "description": "Les deux adolescents paresseux sont envoyés dans l'espace et provoquent des ravages à travers le multivers.",
+            "director": "Jim Reardon",
+            "image": "/assets/images/science_fiction/beavis_and_butthead_do_the_universe.jpg"
+          }
+        ] 
+    }
+]

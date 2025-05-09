@@ -1,0 +1,9 @@
+:root{
+    --main-color:#00ffff ;
+    --main-color-white: white ;
+    --main-color-black: black ;
+    --main-color-light-black: rgba(101, 98, 98, 0.2) ;
+    --z-index:100 ;
+    --z-index-poppup:101 ;
+    --z-index-overlay:98 ;
+}
