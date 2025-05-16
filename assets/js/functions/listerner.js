@@ -81,6 +81,28 @@ const listenerFunction={
                 menuMobile.classList.remove("leftToright");
            },1200) ;
         }
+    },
+    managerForm:(ev)=>{
+        ev.preventDefault() ;
+        const formData=new FormData(form) ;
+        //Envoi des données au serveur avec la fonction fetch() ;
+        alert("votre film a été ajouter avec succes")
+        form.reset() ;
+        fileContent.innerHTML="" ;
+    },
+    dispalayFileImage:()=>{
+        const file=inputFile.files[0] ;
+        let reader=new FileReader() ;
+
+        reader.onload=()=>{
+            const img=new Image(250,210) ;
+            img.src=reader.result ;
+            fileContent.innerHTML="" ;
+            fileContent.appendChild(img) ;
+        }
+        if (file) {
+            reader.readAsDataURL(file) ;
+        }
     }
 }
 
@@ -100,4 +122,6 @@ export const setUpListener=()=>{
         subNavCategorie.onclick=listenerFunction.handleSubNav ;
     });
     collapse? collapse.onclick=listenerFunction.managerMenuMobile:null ;
+    btnForm?  btnForm.onclick=listenerFunction.managerForm:null ;
+    inputFile?  inputFile.onchange=listenerFunction.dispalayFileImage:null ;
 }
