@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection de film</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
+
 <body>
     <header class="flex aic box gap-5 relative">
         <div class="logo flex-1">Collection</div>
@@ -54,19 +56,20 @@
             <nav class="nav-mobile">
                 <ul class="unlisted">
                     <li class="nav-item"><a href="/">accueil</a></li>
-                <li class="nav-item"><a href="/">liste</a></li>
-                <li class="nav-item"><a href="/">ajouter</a></li>
+                    <li class="nav-item"><a href="/">liste</a></li>
+                    <li class="nav-item"><a href="/">ajouter</a></li>
                 </ul>
             </nav>
 
         </div>
     </header>
-    
+
     <div class="container">
         <div class="add-movie-content">
             <div class="add-movie-header">
                 <h1>Bienvenu sur la page d'ajout de film</h1>
-                <p class="details">Sur cette page vous pouvez ajouter vos film en remplissant le formulaire ci-dessous.</p>
+                <p class="details">Sur cette page vous pouvez ajouter vos film en remplissant le formulaire ci-dessous.
+                </p>
             </div>
             <div class="add-movie-form flex jcc">
                 <form action="" method="post" id="add-movie-form" enctype="multipart/form-data">
@@ -100,19 +103,20 @@
                             <div class="form-file-ulistration">
 
                             </div>
-                           <input type="file" name="image" id="image" accept=".jpeg,.png,.jpg">
+                            <input type="file" name="image" id="image" accept=".jpeg,.png,.jpg">
                         </div>
                         <div class="form-inline">
                             <label for="description">Description du film</label>
                             <textarea name="description" id="description" cols="30" rows="10"></textarea>
                         </div>
                         <div class="form-inline">
-                            <button type="submit"id="btn-submit" >Ajouter</button>
+                            <button type="submit" id="btn-submit">Ajouter</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+        
     </div>
 
 
@@ -121,7 +125,9 @@
     </footer>
 
 
+
     <script src="/assets/js/variables.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
 </body>
+
 </html>

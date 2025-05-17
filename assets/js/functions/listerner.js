@@ -103,6 +103,9 @@ const listenerFunction={
         if (file) {
             reader.readAsDataURL(file) ;
         }
+    },
+    filterMovies:(ev)=>{
+        console.log("recherche");
     }
 }
 
@@ -122,6 +125,27 @@ export const setUpListener=()=>{
         subNavCategorie.onclick=listenerFunction.handleSubNav ;
     });
     collapse? collapse.onclick=listenerFunction.managerMenuMobile:null ;
+    //ajout de film via un formulaire 
     btnForm?  btnForm.onclick=listenerFunction.managerForm:null ;
+    //affichage de l'image ajouter au niveau de la page d'ajout
     inputFile?  inputFile.onchange=listenerFunction.dispalayFileImage:null ;
+    //Cette événement me permet de fermer le poppup update form 
+    //et de gerer la mise à jour 
+    document.addEventListener("click",(ev)=>{
+        ev.preventDefault() ;
+        //element.matches(),permet de comparer la classe de l'element et la classe donné en paramètre
+        if(ev.target.matches(".danger")) {
+            const updateForm=document.querySelector(".add-movie-form.update-form") ;
+            if(updateForm) {
+                updateForm.remove();
+            }
+        }
+        if (ev.target.matches(".btn-submit")) {
+            const updateForm=document.querySelector(".add-movie-form.update-form") ;
+            updateForm.remove();
+            alert("votre film a été modifier avec succes")
+        }
+    })
+    //la gestion de la recherche et du filtrage 
+    searchInput? searchInput.onchange=listenerFunction.filterMovies:null ;
 }

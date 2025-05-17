@@ -15,4 +15,5 @@ const form=document.getElementById("add-movie-form") ;
 const btnForm=document.getElementById("btn-submit");
 const inputFile=document.getElementById("image") ;
 const fileContent=document.querySelector(".form-inline .form-file-ulistration") ;
+const updateContainer=document.querySelector(".form-container") ;
 var currentSlide=0 ;
