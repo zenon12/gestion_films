@@ -19,18 +19,21 @@ export const collectionMovie={
     /** Cette fonction nous permet d'afficher les films 
      * elle reçoit le tableau de film en parametre
     */
-    displayMovies:(movies)=>{
-        if (!moviesContent) {
+    displayMovies:(movies,movieContainer)=>{
+        if (!movieContainer) {
             return ;
         }
-        moviesContent.innerHTML="" ;
+        movieContainer.innerHTML="" ;
         movies.forEach(movieData => {
             let img=collectionMovie.createElt("img") ;
             img.src=movieData.image ;
             img.alt=movieData.title ;
             let btnPlay=collectionMovie.createElt("div","btn-play btn",[],"play") ;
             let update=collectionMovie.createElt("div","update btn",[],"edit") ;
-            let movie=collectionMovie.createElt("div","movies-item flex gap-10 mb-20",[
+            let movie=collectionMovie.createElt("div","movies-item relative flex gap-10 mb-20",[
+                collectionMovie.createElt("div","delete-movie absolute",[
+                    collectionMovie.createElt("i","fas fa-times")
+                ]),
                 collectionMovie.createElt("div","movie-image",[img]),
                 collectionMovie.createElt("div","movie-description",[
                     collectionMovie.createElt("div","movie-name",[],movieData.title),
@@ -48,12 +51,11 @@ export const collectionMovie={
                     collectionMovie.createElt("div","inline-group flex gap-20 mt-15",[btnPlay,update])
                 ])
             ])
-            moviesContent.appendChild(movie) ;
+            movieContainer.appendChild(movie) ;
             btnPlay.onclick=()=>{
                 collectionMovie.createPoppup(movieData) ;
             }
             update.onclick=()=>{
-                console.log("saliou");
                 collectionMovie.updateMovie(movieData) ;
             }        
         });

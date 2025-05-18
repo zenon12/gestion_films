@@ -232,6 +232,16 @@ section.ulistration .overlay{
     background-color: var(--main-color);
 }
 
+.delete-movie{
+    right: 5px;
+    top: 0;
+    cursor: pointer;
+}
+.delete-movie i{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--main-color-black);
+}
 
 
 /*** SECTION CATEGORIE****/

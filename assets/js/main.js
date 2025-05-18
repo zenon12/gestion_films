@@ -4,7 +4,7 @@ import { slideFunctions } from "./functions/slide.js"
 
 window.onload=()=>{
     collectionMovie.getData(API) ;
-    collectionMovie.displayMovies(collectionMovie.getDataByGenre("action")) ;
+    collectionMovie.displayMovies(collectionMovie.getDataByGenre("action"),moviesContent) ;
     /** Les fonctions de gestion du slide*/
     slideFunctions.createSlide() ;
     const slides=document.querySelectorAll(".slide-items .slide-item") ;

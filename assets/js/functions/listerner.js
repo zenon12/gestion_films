@@ -11,7 +11,7 @@ const listenerFunction={
     handleListPage:(ev)=>{
         let element=ev.target ;
         let genre=ev.target.textContent ;
-        collectionMovie.displayMovies(collectionMovie.getDataByGenre(genre)) ;
+        collectionMovie.displayMovies(collectionMovie.getDataByGenre(genre),moviesContent) ;
         listenerFunction.removeActive() ;
         element.classList.add("active") ;
     },
@@ -24,49 +24,54 @@ const listenerFunction={
         let genre=ev.target.textContent ;
         let movies=collectionMovie.getDataByGenre(genre) ;
        // moviesItems.classList.add("list-details","movies","flex","jcsb","wrap");
-        listenerFunction.addMovieOnContainer(movies) ;
+       container.innerHTML="" ;
+       const formContainer=collectionMovie.createElt("div","form-container") ;
+       const moviesItems=collectionMovie.createElt("div","list-details movies flex jcsb wrap");
+       collectionMovie.displayMovies(movies,moviesItems) ;
+       container.appendChild(moviesItems) ;
+       container.appendChild(formContainer) ;
     },
     addMovieOnContainer:(movies)=>{
         const moviesItems=document.createElement("div") ;
         moviesItems.className="list-details movies flex jcsb wrap" ;
-        container.innerHTML="" ;
-        movies.forEach(movieData => {
-            let movie=`
-               <div class="movies-item flex gap-10 mb-20">
-                        <div class="movie-image">
-                            <img src="${movieData.image}" alt="${movieData.title}">
-                        </div>
-                        <div class="movie-description">
-                            <div class="movie-name">
-                              ${movieData.title}
-                            </div>
-                            <div class="list-info mb-10">
-                                <ul class="unlisted flex gap-10">
-                                    <li class="list-item">${movieData.year}</li>
-                                    <li class="list-item">18+</li>
-                                    <li class="list-item">${(movieData.genre)[0]}</li>
-                                    <li class="list-item">22mn</li>
-                                </ul>
-                            </div>
-                            <div class="movie-details mb-10">
-                              ${movieData.description}
-                            </div>
-                            <div class="director mb-10">
-                                <strong>Realisateur : </strong>${movieData.director}
-                            </div>
-                            <div class="inline-group flex gap-20 mt-15">
-                                <div class="btn-play btn">
-                                    play
-                                </div>
-                                <div class="time btn">
-                                    Info
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            ` ;
-            moviesItems.innerHTML+=movie ;
-        });
+        // container.innerHTML="" ;
+        // movies.forEach(movieData => {
+        //     let movie=`
+        //        <div class="movies-item flex gap-10 mb-20">
+        //                 <div class="movie-image">
+        //                     <img src="${movieData.image}" alt="${movieData.title}">
+        //                 </div>
+        //                 <div class="movie-description">
+        //                     <div class="movie-name">
+        //                       ${movieData.title}
+        //                     </div>
+        //                     <div class="list-info mb-10">
+        //                         <ul class="unlisted flex gap-10">
+        //                             <li class="list-item">${movieData.year}</li>
+        //                             <li class="list-item">18+</li>
+        //                             <li class="list-item">${(movieData.genre)[0]}</li>
+        //                             <li class="list-item">22mn</li>
+        //                         </ul>
+        //                     </div>
+        //                     <div class="movie-details mb-10">
+        //                       ${movieData.description}
+        //                     </div>
+        //                     <div class="director mb-10">
+        //                         <strong>Realisateur : </strong>${movieData.director}
+        //                     </div>
+        //                     <div class="inline-group flex gap-20 mt-15">
+        //                         <div class="btn-play btn">
+        //                             play
+        //                         </div>
+        //                         <div class="time btn">
+        //                             Info
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //     ` ;
+        //     moviesItems.innerHTML+=movie ;
+        // });
         container.appendChild(moviesItems) ;
     },
     toggleDisplayMobile:()=>{
@@ -140,7 +145,12 @@ const listenerFunction={
             return ;
         }
         // collectionMovie.displayMovies(filterTab) ;
-        listenerFunction.addMovieOnContainer(filterTab) ;
+        container.innerHTML="" ;
+        const formContainer=collectionMovie.createElt("div","form-container") ;
+        const moviesItems=collectionMovie.createElt("div","list-details movies flex jcsb wrap");
+        collectionMovie.displayMovies(filterTab,moviesItems) ;
+        container.appendChild(moviesItems) ;
+        container.appendChild(formContainer) ;
     },
     filterByTitle:({title},search)=>{
         title=title.toLowerCase() ;
@@ -211,6 +221,14 @@ export const setUpListener=()=>{
             const updateForm=document.querySelector(".add-movie-form.update-form") ;
             updateForm.remove();
             alert("votre film a été modifier avec succes")
+        }
+        //Gestion de la suppression d'un film 
+        if (ev.target.matches(".fas.fa-times")) {
+            let closedParent=ev.target.parentNode ;
+            let movie=closedParent.parentNode ;
+            if (movie.classList.contains("movies-item")) {
+                movie.remove() ;
+            }
         }
     })
     //la gestion de la recherche et du filtrage 
