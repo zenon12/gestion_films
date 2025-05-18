@@ -133,6 +133,12 @@ a{
     min-height: 100vh;
     color: var(--main-color-white);
 }
+
+
+.error{
+    text-align: center;
+    color: brown;
+}
 /***** Proprieté typographique *****/
 
 .mb-5{

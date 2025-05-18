@@ -23,8 +23,11 @@ const listenerFunction={
     handleSubNav:(ev)=>{
         let genre=ev.target.textContent ;
         let movies=collectionMovie.getDataByGenre(genre) ;
-        const moviesItems=document.createElement("div") ;
        // moviesItems.classList.add("list-details","movies","flex","jcsb","wrap");
+        listenerFunction.addMovieOnContainer(movies) ;
+    },
+    addMovieOnContainer:(movies)=>{
+        const moviesItems=document.createElement("div") ;
         moviesItems.className="list-details movies flex jcsb wrap" ;
         container.innerHTML="" ;
         movies.forEach(movieData => {
@@ -90,7 +93,7 @@ const listenerFunction={
         form.reset() ;
         fileContent.innerHTML="" ;
     },
-    dispalayFileImage:()=>{
+    displayFileImage:()=>{
         const file=inputFile.files[0] ;
         let reader=new FileReader() ;
 
@@ -105,7 +108,70 @@ const listenerFunction={
         }
     },
     filterMovies:(ev)=>{
-        console.log("recherche");
+        const data=JSON.parse(localStorage.getItem("data")) ;
+        let search=ev.target.value ;
+        let filterTab=[] ;
+        let i=0 ;
+        let tampon
+        if (search=="") {
+            return ;
+        }
+        for (const genreMovie in data){
+            const movies=data[genreMovie] ;
+            if (filterMovie=="year") {
+                tampon=movies.filter((movie)=>listenerFunction.filterByYear(movie,search)) ;
+            }
+            if (filterMovie=="title") {
+                tampon=movies.filter((movie)=>listenerFunction.filterByTitle(movie,search)) ;
+            }
+            if (filterMovie=="director") {
+                tampon=movies.filter((movie)=>listenerFunction.filterByDirector(movie,search)) ;
+            }
+            if (tampon.length !==0) {
+                tampon.forEach(element => {
+                    filterTab[i]=element ;
+                    i++ ;
+                });
+            }
+        }
+        if (filterTab.length==0) {
+            let error=`<h1 class="error">Film introuvable!</h1>`;
+            container.innerHTML=error ;
+            return ;
+        }
+        // collectionMovie.displayMovies(filterTab) ;
+        listenerFunction.addMovieOnContainer(filterTab) ;
+    },
+    filterByTitle:({title},search)=>{
+        title=title.toLowerCase() ;
+        search=(search.trim()).toLowerCase() ;
+        return title.includes(search) ;
+    },
+    filterByDirector:({director},search)=>{
+        director=director.toLowerCase() ;
+        search=(search.trim()).toLowerCase() ;
+        return director.includes(search) ;
+    },
+    filterByYear:({year},searchYear)=>{
+        if (year==searchYear) {
+            return true  ;
+        }else{
+            return false ;
+        }
+    },
+    displayFilters:(ev)=>{
+        filterContent.classList.remove("none") ;
+    },
+    closedFilters:(ev)=>{
+        filterContent.classList.add("none") ;
+    },
+    handleFilters:(ev)=>{
+        filterMovie=ev.target.textContent ;
+        listFilters.forEach(element => {
+            element.style.backgroundColor="" ;
+        });
+        ev.target.style.backgroundColor="#00ffff" ;
+
     }
 }
 
@@ -128,24 +194,30 @@ export const setUpListener=()=>{
     //ajout de film via un formulaire 
     btnForm?  btnForm.onclick=listenerFunction.managerForm:null ;
     //affichage de l'image ajouter au niveau de la page d'ajout
-    inputFile?  inputFile.onchange=listenerFunction.dispalayFileImage:null ;
+    inputFile?  inputFile.onchange=listenerFunction.displayFileImage:null ;
     //Cette événement me permet de fermer le poppup update form 
     //et de gerer la mise à jour 
     document.addEventListener("click",(ev)=>{
-        ev.preventDefault() ;
         //element.matches(),permet de comparer la classe de l'element et la classe donné en paramètre
         if(ev.target.matches(".danger")) {
             const updateForm=document.querySelector(".add-movie-form.update-form") ;
+            ev.preventDefault() ;
             if(updateForm) {
                 updateForm.remove();
             }
         }
         if (ev.target.matches(".btn-submit")) {
+            ev.preventDefault() ;
             const updateForm=document.querySelector(".add-movie-form.update-form") ;
             updateForm.remove();
             alert("votre film a été modifier avec succes")
         }
     })
     //la gestion de la recherche et du filtrage 
+    searchInput? searchInput.onclick=listenerFunction.displayFilters:null ;
     searchInput? searchInput.onchange=listenerFunction.filterMovies:null ;
+    listFilters.forEach(filter => {
+        filter? filter.onclick=listenerFunction.handleFilters:null ;
+    });
+    closedFilter? closedFilter.onclick=listenerFunction.closedFilters:null ;
 }

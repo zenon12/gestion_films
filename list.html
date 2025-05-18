@@ -21,7 +21,7 @@
                     categorie <i class="fa-solid fa-chevron-down"></i>
                     <ul class="unlisted absolute box none">
                         <li class="nav-item">action</li>
-                        <li class="nav-item"> drame</li>
+                        <li class="nav-item">drame</li>
                         <li class="nav-item">romance</li>
                         <li class="nav-item">shonen</li>
                         <li class="nav-item">fantastique</li>
@@ -36,6 +36,17 @@
             </div>
             <div class="search-input flex-1">
                 <input type="text" name="search" placeholder="rechercher ..." required>
+            </div>
+            <div class="filter-content absolute none" id="filter-content">
+                <div class="closed-filter absolute" id="closed-filter">
+                    <i class="fas fa-times"></i>
+                </div>
+                <h4>Cliquez sur un filtre au choix:</h4>
+                <ul class="inlisted flex jcc gap-10">
+                    <li class="list-filter">title</li>
+                    <li class="list-filter">year</li>
+                    <li class="list-filter">director</li>
+                </ul>
             </div>
         </div>
         <div class="collapse none" id="collapse-bars">

@@ -35,7 +35,18 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="search-input flex-1">
-                <input type="text" name="search" placeholder="rechercher ..." required>
+                <input type="text" name="search" placeholder="rechercher ...">
+            </div>
+            <div class="filter-content absolute none" id="filter-content">
+                <div class="closed-filter absolute" id="closed-filter">
+                    <i class="fas fa-times"></i>
+                </div>
+                <h4>Cliquez sur un filtre au choix:</h4>
+                <ul class="inlisted flex jcc gap-10">
+                    <li class="list-filter">title</li>
+                    <li class="list-filter">year</li>
+                    <li class="list-filter">director</li>
+                </ul>
             </div>
         </div>
         <div class="collapse none" id="collapse-bars">
