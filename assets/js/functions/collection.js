@@ -163,9 +163,9 @@ export const collectionMovie={
             </div>
         </div>
        `;
-       if (updateContainer) {
-          updateContainer.innerHTML=poppup ;
-       }
+     const formContainer=collectionMovie.createElt("div","form-container") ;
+     formContainer.innerHTML=poppup ;
+     container.appendChild(formContainer) ;
     // container.innerHTML+=poppup  le innerHTML supprimer les evenements deja definie
     },
     /**Cette function permet de creer un element node et ses fils */

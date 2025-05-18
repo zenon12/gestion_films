@@ -25,11 +25,9 @@ const listenerFunction={
         let movies=collectionMovie.getDataByGenre(genre) ;
        // moviesItems.classList.add("list-details","movies","flex","jcsb","wrap");
        container.innerHTML="" ;
-       const formContainer=collectionMovie.createElt("div","form-container") ;
        const moviesItems=collectionMovie.createElt("div","list-details movies flex jcsb wrap");
        collectionMovie.displayMovies(movies,moviesItems) ;
        container.appendChild(moviesItems) ;
-       container.appendChild(formContainer) ;
     },
     addMovieOnContainer:(movies)=>{
         const moviesItems=document.createElement("div") ;
@@ -112,12 +110,16 @@ const listenerFunction={
             reader.readAsDataURL(file) ;
         }
     },
-    filterMovies:(ev)=>{
+    filterMovies:()=>{
+        if (filterMovie=="") {
+            return ;
+        }
         const data=JSON.parse(localStorage.getItem("data")) ;
-        let search=ev.target.value ;
+        let search=searchInput.value ;
+        console.log(search);
         let filterTab=[] ;
         let i=0 ;
-        let tampon
+        let tampon ;
         if (search=="") {
             return ;
         }
@@ -146,11 +148,9 @@ const listenerFunction={
         }
         // collectionMovie.displayMovies(filterTab) ;
         container.innerHTML="" ;
-        const formContainer=collectionMovie.createElt("div","form-container") ;
         const moviesItems=collectionMovie.createElt("div","list-details movies flex jcsb wrap");
         collectionMovie.displayMovies(filterTab,moviesItems) ;
         container.appendChild(moviesItems) ;
-        container.appendChild(formContainer) ;
     },
     filterByTitle:({title},search)=>{
         title=title.toLowerCase() ;
@@ -234,6 +234,7 @@ export const setUpListener=()=>{
     //la gestion de la recherche et du filtrage 
     searchInput? searchInput.onclick=listenerFunction.displayFilters:null ;
     searchInput? searchInput.onchange=listenerFunction.filterMovies:null ;
+    searchIcon? searchIcon.onclick=listenerFunction.filterMovies:null ;
     listFilters.forEach(filter => {
         filter? filter.onclick=listenerFunction.handleFilters:null ;
     });
